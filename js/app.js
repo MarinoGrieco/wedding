@@ -65,6 +65,7 @@ const App = {
   handleClick(e) {
     const btn = e.target.closest('[data-action]');
     if (!btn) return;
+    e.preventDefault();
     const action = btn.dataset.action;
     const value = btn.dataset.value;
     switch (action) {
